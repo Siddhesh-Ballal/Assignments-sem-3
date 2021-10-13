@@ -1,0 +1,48 @@
+// Siddhesh Ballal
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    float x, y, res;
+    int  opr;
+    printf("Enter first number x:  ");
+    scanf("%f",&x);
+    printf("Enter second number y: ");
+    scanf("%f",&y);
+    printf("Now, enter character for respective operation:\n");
+    printf(" 1 for addition x+y\n 2 for subtraction x-y\n 3 for multiplication x*y\n 4 for division x/y: ");
+    scanf("%d",&opr);
+   
+    if(opr==1)
+    {
+        res=x+y;
+        printf("x+y= %.2f", res);
+    }
+   
+    else if(opr==2)
+    {
+        res=x-y;
+        printf("x-y= %.2f", res);
+    }
+   
+    else if(opr==3)
+    {
+        res=x*y;
+        printf("x*y= %.2f", res);
+    }
+   
+    else if(opr==4)
+    {
+        res=x/y;
+        printf("x/y= %.2f", res);
+    }
+   
+    else
+    {
+        printf("Invalid operator input");
+    }
+    return 0;
+}
