@@ -1,0 +1,70 @@
+//SEITA106 Siddhesh Ballal
+// 13-10-2021
+
+/*
+Pass two parameters to function as(start and end), and display all prime numbers between two
+Intervals.
+
+*/
+
+
+#include <stdio.h>
+
+int is_prime(int n);
+void primes_from_to(int start, int end);
+
+
+
+int main() 
+{
+  int start, end;
+  printf("\nEnter the starting value: ");
+  scanf("%d", &start);
+  printf("\nEnter the ending value: ");
+  scanf("%d", &end);
+
+  printf("Prime numbers from %d to %d are: \n", start, end);
+  primes_from_to( start,  end );
+  return 0;
+}
+
+int is_prime(int n)
+{
+  if (n <= 1)
+  {
+        return 0;
+  }
+
+    else if (n == 2 || n == 3)
+    {
+        return 1;
+    }
+    else
+    {
+        for (int i=2 ; i < n ; i++)
+        {
+            if (n % i == 0)
+            {
+                return 0;
+                break;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+    }
+}
+
+
+void primes_from_to(int start, int end)
+{
+  for(int i= start; i <= end; i++)
+  {
+    if (is_prime(i) == 1)
+    {
+      printf(" %d ",i);
+    }
+  }
+
+}
