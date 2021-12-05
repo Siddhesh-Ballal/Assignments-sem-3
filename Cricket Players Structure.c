@@ -149,6 +149,9 @@ int main() {
       }
       break;
         
+      case('g'):
+      printf("");
+      menu_control=0;
   }
   }
   return 0;
